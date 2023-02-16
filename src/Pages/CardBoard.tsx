@@ -6,7 +6,7 @@ import { Configuration, OpenAIApi } from "openai";
 import "../App.css";
 
 const ChatBoard = () => {
-  const storedApiKey = "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";
+  const storedApiKey = "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;
   const { messages, appendMsg, setTyping } = useMessages([]);
   const [openai, setOpenai] = useState(
     new OpenAIApi(new Configuration({ apiKey: storedApiKey }))
