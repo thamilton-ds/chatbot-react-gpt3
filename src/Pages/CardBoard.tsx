@@ -5,8 +5,9 @@ import defaultSettings from "../Components/Characters";
 import { Configuration, OpenAIApi } from "openai";
 import "../App.css";
 
-const ChatBoard = () => {
-  const storedApiKey = "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";
+const ChatBoard = ({ apiKey }: { apiKey: string }) => {
+    console.log("apiKey", apiKey);
+  const storedApiKey = apiKey;
   const { messages, appendMsg, setTyping } = useMessages([]);
   const [openai, setOpenai] = useState(
     new OpenAIApi(new Configuration({ apiKey: storedApiKey }))
